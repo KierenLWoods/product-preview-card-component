@@ -116,6 +116,7 @@ body{
         .perfume-image-desktop{
             display: inline;
             width: 100%;
+            object-fit:fill 
         }
         .perfume-image-mobile{
             display: none;
