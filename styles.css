@@ -1,0 +1,124 @@
+:root{
+    --cream:hsl(30, 38%, 92%);
+    --white:hsl(0, 0%, 100%);
+    --dark-greyish-blue:hsl(228, 12%, 48%);
+    --dark-cyan:hsl(158, 36%, 37%);
+    --hover-color:#1A4032
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem 0.5rem;
+    background-color: var(--cream);
+    font-family: "Montserrat";
+    font-size: 14px;
+    min-height: 100vh;
+}
+
+.grid-container{
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width:40rem;
+}
+
+.image-container{
+    display:flex;
+    justify-content: center;
+}
+
+.perfume-image-mobile{
+    width:100%
+}
+
+.perfume-image-desktop{
+    display: none;
+}
+
+.perfume-text{
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.25rem;
+    align-self: flex-start;
+    color: var(--dark-greyish-blue);
+    margin:0;
+}
+.perfume-name{
+    font-family: "Fraunces";
+    font-weight: 700;
+    margin:0.5rem 0;;
+}
+
+.description{
+    color: var(--dark-greyish-blue);
+    font-weight: 500;
+    margin:0.5rem 0.25rem;
+    line-height: 1.5rem;
+}
+
+.text-container{
+    display:flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: stretch;
+    padding: 1.5rem;
+}
+
+.price{
+    color: var(--dark-greyish-blue);
+    font-weight: 500;
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+
+
+.discounted-price{
+    padding-right: 1rem;
+    color: var(--dark-cyan);
+    font-family: "Fraunces";
+    font-weight: 700;
+    font-size: 1.75rem;
+    vertical-align: middle;
+}
+
+.add-to-cart{
+    background-color: var(--dark-cyan);
+    border-radius: 10px;
+    padding: 1rem 2rem;    
+    text-decoration: none;
+    color: var(--white);
+    text-align: center;
+}
+
+.add-to-cart img{
+    padding-right: 0.5rem;
+}
+
+.add-to-cart:hover{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media only screen and (min-width:760px) {
+        .grid-container{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .perfume-image-desktop{
+            display: inline;
+            width: 100%;
+        }
+        .perfume-image-mobile{
+            display: none;
+        }
+
+    }
