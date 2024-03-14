@@ -5,6 +5,9 @@
     --dark-cyan:hsl(158, 36%, 37%);
     --hover-color:#1A4032
 }
+html{
+    font-size: 14px;
+}
 
 body{
     display: flex;
@@ -12,16 +15,16 @@ body{
     align-items: center;
     padding:1rem 0.5rem;
     background-color: var(--cream);
-    font-family: "Montserrat";
-    font-size: 14px;
+    font-family: "Montserrat";    
     min-height: 100vh;
 }
 
 .grid-container{
+    --min-column-width:20rem;
     background-color: var(--white);
     display: grid;
-    grid-template-columns: 1fr;
-    border-radius: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(min(var(--min-column-width),100%),1fr));
+    border-radius: .75rem;
     overflow: hidden;
     max-width:40rem;
 }
@@ -108,10 +111,7 @@ body{
 .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
-    @media only screen and (min-width:760px) {
-        .grid-container{
-            grid-template-columns: 1fr 1fr;
-        }
+    @media only screen and (min-width:760px) {       
 
         .perfume-image-desktop{
             display: inline;
